@@ -1,0 +1,52 @@
+[
+  {
+    "description":"模拟一个没有参数get请求",
+    "request":{
+      "uri":"/getdemo",
+      "method":"get"
+    },
+    "response":{
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      },
+      "text":"这是一个没有参数的get请求"
+    }
+
+  },
+  {
+    "description":"这是一个带参数get请求",
+    "request":{
+      "uri":"/getwithparam",
+      "method":"get",
+      "queries":{
+        "name":"huhansan",
+        "sex":"20"
+      }
+    },
+    "response":{
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      },
+      "text":"我胡汉三又回来啦！！！！"
+    }
+
+  },
+
+    {
+      "description":"这是我自己写的一个带参数的接口请求",
+      "request":{
+        "uri":"/myparamrequest",
+        "method":"get",
+        "queries":{
+          "name":"aaron",
+          "sex":"boy"
+        }
+      },
+      "response":{
+        "headers":{
+          "Content-Type":"text/html;charset=bgk"
+        },
+        "text":"这是我的基本简要信息"
+      }
+    }
+]
