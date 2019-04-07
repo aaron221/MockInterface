@@ -1,18 +1,25 @@
 package interfaceDev.example;
 
 import com.alibaba.fastjson.JSONObject;
+import interfaceDev.bean.User;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 @RestController
-@Api(value = "/",description = "这是我全部的post请求")
+@Api(value = "/",description = "这是baseinfo中的post请求")
 @RequestMapping("/v1")
 public class MyPostMethod {
 
@@ -21,7 +28,7 @@ public class MyPostMethod {
 
 
     //以json格式入参的请求
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    @RequestMapping(value = "/login",method = RequestMethod.POST,consumes= MediaType.APPLICATION_JSON_VALUE)
     @ApiOperation(value = "登陆接口",httpMethod = "POST")
     public String login(HttpServletResponse response,HttpServletRequest request,
                         @RequestBody JSONObject parame){
@@ -84,4 +91,5 @@ public class MyPostMethod {
     //    }
     //    return "参数不合法";
     //}
+
 }

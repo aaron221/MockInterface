@@ -1,6 +1,7 @@
 package interfaceDev.example;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
@@ -81,10 +82,10 @@ public class MyGetMethod {
      * 第二种需要携带参数访问的get请求
      * url:ip:port/get/with/param/10/20
      */
-    @RequestMapping(value = "/get/with/param/{start}/{end}")
+    @RequestMapping(value = "/get/with/param/{start}")
     @ApiOperation(value = "需求携带参数才能访问的get请求的第二种实现",httpMethod = "GET")
-    public  Map myGetList(@PathVariable Integer start,
-                          @PathVariable Integer end){
+    @ApiImplicitParam(name = "start", value = "开始数字", paramType = "path", required = true, dataType = "Integer")
+    public  Map myGetList(@PathVariable Integer start){
 
         Map<String,Integer> myList = new HashMap<>();
 
