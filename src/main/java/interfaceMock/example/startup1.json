@@ -6,7 +6,7 @@
     },
     "response":{
       "headers":{
-        "Content-Type":"text/html;charset=gbk"//此处解决响应的内容出现乱码问题
+        "Content-Type":"text/html;charset=gbk"
       },
     "text":"第一个moco框架demo"
   }

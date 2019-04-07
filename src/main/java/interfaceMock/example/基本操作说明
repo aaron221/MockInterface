@@ -1,1 +1,15 @@
-java -jar ./Chapter7/moco.jar http -p 8888 -c ./Chapter7/startup1.json
+对单个json配置文件进行操作
+java -jar /path/moco.jar http -p 8888 -c /path/startup1.json
+jar路径和json路径根据实际情况填写
+
+
+对多个json配置文件同时进行操作
+java -jar moco.jar http -p 8888 -g config.json
+
+config.json:
+[
+  {"include":"startup1.json"},
+  {"include":"startupGet.json"}
+  ]
+
+注意一次执行多个json文件时候,mocp.jar和所有要执行的json文件放在一个目录下

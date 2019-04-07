@@ -28,7 +28,7 @@ public class MyPostMethod {
 
 
     //以json格式入参的请求
-    @RequestMapping(value = "/login",method = RequestMethod.POST,consumes= MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ApiOperation(value = "登陆接口",httpMethod = "POST")
     public String login(HttpServletResponse response,HttpServletRequest request,
                         @RequestBody JSONObject parame){

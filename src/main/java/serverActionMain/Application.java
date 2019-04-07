@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import javax.annotation.PreDestroy;
 
 
-@ComponentScan("interfaceDev.example")
+@ComponentScan("interfaceDev")
 @SpringBootApplication
 public class Application {
     private  static ConfigurableApplicationContext context;
@@ -18,7 +18,6 @@ public class Application {
         Application.context = SpringApplication.run(Application.class,args);
 
     }
-
 
 
     @PreDestroy

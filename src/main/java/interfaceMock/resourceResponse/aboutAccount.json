@@ -1,0 +1,56 @@
+[
+  {
+    "description": "账号验证接",
+    "request": {
+      "uri": "/resource/account/veriﬁcation",
+      "method": "post",
+      "headers":{
+        "content-type":"application/json"
+      },
+      "forms":{
+        "name":"wanglaosi",
+        "sex":"woman"
+      }
+    },
+    "response": {
+      "json": {
+        "requestId": null,
+        "success": true,
+        "business": null,
+        "errorCode": null,
+        "errorMessage": null,
+        "params": null,
+        "date": null,
+        "version": null,
+        "obj": {
+          "status": "SUCCESS",
+          "pwdChangeDate": 1542976080000
+        }
+      }
+    }
+  },
+  {
+    "description": "账号密码变更接",
+    "request": {
+      "uri": "/resource/account/isAccountChanged",
+      "method": "post",
+      "json":{
+        "name":"wanglaosi",
+        "sex":"woman"
+      }
+    },
+    "response": {
+      "json": {
+        "requestId": null,
+        "success": true,
+        "business": null,
+        "errorCode": null,
+        "errorMessage": null,
+        "params": null,
+        "date": null,
+        "version": null,
+        "obj": false
+      }
+    }
+  }
+]
