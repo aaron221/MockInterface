@@ -21,7 +21,6 @@ public class ResourceService {
     public JSONObject getVeriﬁcationInfoTest(HttpServletRequest request,
                                          @RequestBody JSONObject param){
         String string =" {\"requestId\": \"null\",\"errorMessage\":\"null\"}";
-        string =string.replace(" ","");
 
         jsonObject = TypeConversion.strTurnJsonobj(string);
 
@@ -51,7 +50,6 @@ public class ResourceService {
     public JSONObject getVeriﬁcationInfo(HttpServletRequest request,
                                          @RequestBody JSONObject jsonObject){
         String string =" {\"requestId\": \"null\",\"errorMessage\":\"null\"}";
-        string =string.replace(" ","");
         jsonObject = TypeConversion.strTurnJsonobj(string);
 
         if(!request.getHeader("content-Type").equals("application/json")){
@@ -68,5 +66,11 @@ public class ResourceService {
     }
 
 
+    public static void main(String[] args) {
+        String string ="{  \"requestId\": null,  \"success\": true,  \"business\": null,  \"errorCode\": null,  \"errorMessage\": null,  \"params\": null,  \"date\": null,  \"version\": null}";
+        jsonObject = TypeConversion.strTurnJsonobj(string);
+        jsonObject.put("obj","{    \"status\": \"SUCCESS\",    \"pwdChangeDate\": 1542976080000  }");
+        System.out.println(jsonObject.toJSONString());
+    }
 
 }
